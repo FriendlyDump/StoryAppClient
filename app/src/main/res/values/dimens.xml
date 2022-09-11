@@ -28,6 +28,8 @@
     <dimen name="registrationProposalTextViewSize">15sp</dimen>
     <dimen name="registrationProposalTextViewMarginTop">10dp</dimen>
     <dimen name="registrationLinkTextViewMarginTop">3dp</dimen>
+    <dimen name="authorizationButtonDrawablePadding">7dp</dimen>
+    <dimen name="authorizationButtonPaddingHorizontal">10dp</dimen>
     <fraction name="pivotAnimation">50%</fraction>
     <integer name="durationAnimation">1000</integer>
     <integer name="durationProposalAnimation">1300</integer>
