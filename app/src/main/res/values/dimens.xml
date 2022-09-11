@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="appNameTextMarginTop">60dp</dimen>
+    <dimen name="fromScaleAnimation">0.5</dimen>
+    <dimen name="toScaleAnimation">1.0</dimen>
+    <dimen name="appNameLogoTextSize">50sp</dimen>
+    <dimen name="appAuthorizationTextMarginTop">80dp</dimen>
+    <dimen name="appAuthorizationTextSize">35sp</dimen>
+    <dimen name="cardViewCornerRadius">30dp</dimen>
+    <dimen name="cardViewMarginHorizontal">30dp</dimen>
+    <dimen name="cardViewAuthorizationHeight">370dp</dimen>
+    <dimen name="cardViewStrokeWidth">5dp</dimen>
+    <dimen name="authorizationCardViewMarginTop">20dp</dimen>
+    <dimen name="authorizationTextViewSize">20sp</dimen>
+    <dimen name="authorizationEditTextMarginHorizontal">25dp</dimen>
+    <dimen name="authorizationEditTextMarginTop">20dp</dimen>
+    <dimen name="authorizationButtonMarginTop">20dp</dimen>
+    <dimen name="authorizationButtonTextSize">20sp</dimen>
+    <dimen name="authorizationTextViewMarginTop">30dp</dimen>
+    <dimen name="authorizationEditTextStrokeWidth">3dp</dimen>
+    <dimen name="authorizationEditTextRadius">15dp</dimen>
+    <dimen name="authorizationEditTextHeight">60dp</dimen>
+    <dimen name="authorizationEditTextPaddingStart">10dp</dimen>
+    <dimen name="authorizationEditTextDrawablePadding">7dp</dimen>
+    <dimen name="authorizationButtonIconPadding">10dp</dimen>
+    <dimen name="authorizationButtonCornerRadius">10dp</dimen>
+    <dimen name="authorizationButtonStrokeWidth">3dp</dimen>
+    <dimen name="registrationProposalTextViewSize">15sp</dimen>
+    <dimen name="registrationProposalTextViewMarginTop">10dp</dimen>
+    <dimen name="registrationLinkTextViewMarginTop">3dp</dimen>
+    <fraction name="pivotAnimation">50%</fraction>
+    <integer name="durationAnimation">1000</integer>
+    <integer name="durationProposalAnimation">1300</integer>
+    <integer name="zero">0</integer>
+</resources>

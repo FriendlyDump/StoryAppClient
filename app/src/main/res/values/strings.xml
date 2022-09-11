@@ -1,3 +1,13 @@
 <resources>
     <string name="app_name">StoryAppClient</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="appNameLogoText">Story</string>
+    <string name="appAuthorizationText">Authorization</string>
+    <string name="loginAuthorizationText">Please, enter your login</string>
+    <string name="loginAuthorizationEditTextHint">Login</string>
+    <string name="passwordAuthorizationText">Please, enter your password</string>
+    <string name="passwordAuthorizationEditTextHint">Password</string>
+    <string name="authorizationButtonText">Sign In</string>
+    <string name="registrationProposalText">Don\'t have an account?</string>
+    <string name="registrationProposalLinkText">Register now</string>
 </resources>

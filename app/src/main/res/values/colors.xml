@@ -7,4 +7,12 @@
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="statusBarColor">#FF0000</color>
+    <color name="backgroundAppColor">#474242</color>
+    <color name="appNameLogoColor">#FFFFFF</color>
+    <color name="appAuthorizationColor">#E32727</color>
+    <color name="editTextIconInFocus">#32EF11</color>
+    <color name="red">#FF0000</color>
+    <color name="authorizationButtonColor">#4BF82E</color>
+    <color name="registrationLinkTextViewColor">#0000FF</color>
 </resources>
