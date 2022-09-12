@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".presentation.screens.AuthorizationFragment"
+    android:background="@color/backgroundAppColor">
+
+
+    <TextView
+        android:id="@+id/appNameLogo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/appNameLogoText"
+        android:textColor="@color/appNameLogoColor"
+        android:textSize="@dimen/appNameLogoTextSize"
+        android:textStyle="italic"
+        android:fontFamily="@font/app_logo_font"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="@dimen/appNameAuthorizationTextMarginTop"/>
+
+    <TextView
+        android:id="@+id/authorizationTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/appAuthorizationText"
+        android:textColor="@color/app_authorization_registration_color"
+        android:textSize="@dimen/appAuthorizationRegistrationTextSize"
+        android:textStyle="bold"
+        android:fontFamily="@font/app_title_font"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/appNameLogo"
+        android:layout_marginTop="@dimen/appAuthorizationTextMarginTop"/>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/cardViewAuthorizationHeight"
+        android:backgroundTint="@color/backgroundAppColor"
+        app:cardCornerRadius="@dimen/cardViewCornerRadius"
+        android:layout_marginTop="@dimen/authorizationCardViewMarginTop"
+        android:layout_marginHorizontal="@dimen/cardViewMarginHorizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/authorizationTextView">
+
+        <LinearLayout
+            android:id="@+id/cardViewLinearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:background="@drawable/authorization_registration_card_view_shape"
+            android:gravity="center_horizontal">
+
+            <TextView
+                android:id="@+id/loginAuthorizationTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/loginAuthorizationText"
+                android:textColor="@color/white"
+                android:textSize="@dimen/authorizationTextViewSize"
+                android:fontFamily="@font/app_fields_font"
+                android:layout_marginTop="@dimen/authorizationTextViewMarginTop"/>
+
+            <EditText
+                android:id="@+id/loginAuthorizationEditText"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/authorizationEditTextHeight"
+                android:textColor="@color/white"
+                android:hint="@string/loginAuthorizationRegistrationEditTextHint"
+                android:textColorHint="@color/white"
+                android:inputType="textPersonName"
+                android:drawableStart="@drawable/login_icon_edit_text_selector"
+                android:paddingStart="@dimen/authorizationRegistrationEditTextPaddingStart"
+                android:drawablePadding="@dimen/authorizationRegistrationButtonDrawablePadding"
+                android:background="@drawable/authorization_registration_edit_text_background"
+                android:layout_marginTop="@dimen/authorizationEditTextMarginTop"
+                android:layout_marginHorizontal="@dimen/authorizationRegistrationEditTextMarginHorizontal"
+                android:importantForAutofill="no"
+                tools:ignore="RtlSymmetry"/>
+
+            <TextView
+                android:id="@+id/passwordAuthorizationTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/passwordAuthorizationText"
+                android:textColor="@color/white"
+                android:textSize="@dimen/authorizationTextViewSize"
+                android:fontFamily="@font/app_fields_font"
+                android:layout_marginTop="@dimen/authorizationTextViewMarginTop"/>
+
+            <EditText
+                android:id="@+id/passwordAuthorizationEditText"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/authorizationEditTextHeight"
+                android:textColor="@color/white"
+                android:hint="@string/passwordAuthorizationRegistrationEditTextHint"
+                android:textColorHint="@color/white"
+                android:inputType="textPassword"
+                android:drawableStart="@drawable/password_icon_edit_text_selector"
+                android:paddingStart="@dimen/authorizationRegistrationEditTextPaddingStart"
+                android:drawablePadding="@dimen/authorizationRegistrationEditTextDrawablePadding"
+                android:background="@drawable/authorization_registration_edit_text_background"
+                android:layout_marginTop="@dimen/authorizationEditTextMarginTop"
+                android:layout_marginHorizontal="@dimen/authorizationRegistrationEditTextMarginHorizontal"
+                android:importantForAutofill="no"
+                tools:ignore="RtlSymmetry"/>
+
+            <android.widget.Button
+                android:id="@+id/authorizationButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableStart="@drawable/ic_icon_button"
+                android:drawablePadding="@dimen/authorizationRegistrationButtonDrawablePadding"
+                android:paddingHorizontal="@dimen/authorizationRegistrationButtonPaddingHorizontal"
+                android:text="@string/authorizationButtonText"
+                android:textSize="@dimen/authorizationRegistrationButtonTextSize"
+                android:fontFamily="@font/app_title_font"
+                android:textAllCaps="false"
+                android:layout_marginTop="@dimen/authorizationButtonMarginTop"
+                app:backgroundTint="@null"
+                android:background="@drawable/authorization_registration_button_background"/>
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:id="@+id/registrationProposalTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/registrationProposalText"
+        android:textColor="@color/white"
+        android:textSize="@dimen/registrationAuthorizationProposalTextViewSize"
+        android:fontFamily="@font/app_fields_font"
+        app:layout_constraintTop_toBottomOf="@+id/cardView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="@dimen/registrationAuthorizationProposalTextViewMarginTop"/>
+
+    <TextView
+        android:id="@+id/registrationLinkTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/app_fields_font"
+        android:text="@string/registrationProposalLinkText"
+        android:textColor="@color/red"
+        android:textSize="@dimen/registrationAuthorizationProposalTextViewSize"
+        app:layout_constraintStart_toStartOf="@+id/registrationProposalTextView"
+        app:layout_constraintEnd_toEndOf="@+id/registrationProposalTextView"
+        app:layout_constraintTop_toBottomOf="@+id/registrationProposalTextView"
+        android:layout_marginTop="@dimen/registrationAuthorizationLinkTextViewMarginTop"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

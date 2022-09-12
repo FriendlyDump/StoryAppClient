@@ -2,6 +2,9 @@
     <string name="app_name">StoryAppClient</string>
     <string name="appNameLogoText">Story</string>
     <string name="appRegistrationText">Registration</string>
+    <string name="appAuthorizationText">Authorization</string>
+    <string name="loginAuthorizationText">Please, enter your login</string>
+    <string name="passwordAuthorizationText">Please, enter your password</string>
     <string name="firstNameRegistrationText">Please, enter your first name</string>
     <string name="firstNameRegistrationEditTextHint">First name</string>
     <string name="lastNameRegistrationText">Please, enter your last name</string>
@@ -12,7 +15,10 @@
     <string name="passwordAuthorizationRegistrationEditTextHint">Password</string>
     <string name="emailRegistrationText">Please, enter your email address</string>
     <string name="emailRegistrationEditTextHint">Email</string>
+    <string name="authorizationButtonText">Sign In</string>
     <string name="registrationButtonText">Register</string>
+    <string name="registrationProposalText">Don\'t have an account?</string>
     <string name="authorizationProposalText">Already have an account?</string>
+    <string name="registrationProposalLinkText">Register now</string>
     <string name="authorizationLinkText">Log in now</string>
 </resources>
