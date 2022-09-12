@@ -10,23 +10,22 @@ import android.view.ViewGroup
 import android.view.animation.Animation
 import android.view.animation.AnimationUtils
 import com.storyapp.client.R
-import com.storyapp.client.databinding.FragmentAuthorizationBinding
+import com.storyapp.client.databinding.FragmentRegistrationBinding
 
-class AuthorizationFragment : Fragment() {
+class RegistrationFragment : Fragment() {
 
-    private var _bindind: FragmentAuthorizationBinding? = null
-    private val binding get() = _bindind!!
+    private var _binding: FragmentRegistrationBinding? = null
+    private val binding get() = _binding!!
 
     private var myAnimation: Animation? = null
     private var proposalAnimation: Animation? = null
 
     override fun onCreateView(
-        inflater: LayoutInflater,
-        container: ViewGroup?,
+        inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        _bindind = FragmentAuthorizationBinding.inflate(inflater, container, false)
+        _binding = FragmentRegistrationBinding.inflate(inflater, container, false)
         return binding.root
     }
 
@@ -40,16 +39,22 @@ class AuthorizationFragment : Fragment() {
         myAnimation = AnimationUtils.loadAnimation(requireContext(), R.anim.views_animation)
         proposalAnimation = AnimationUtils.loadAnimation(requireContext(), R.anim.proposal_textview_animation)
         tieViewsToAnimation(binding.appNameLogo)
-        tieViewsToAnimation(binding.authorizationTextView)
+        tieViewsToAnimation(binding.registrationTextView)
         tieViewsToAnimation(binding.cardView)
         tieViewsToAnimation(binding.cardViewLinearLayout)
-        tieViewsToAnimation(binding.loginAuthorizationTextView)
-        tieViewsToAnimation(binding.loginAuthorizationEditText)
-        tieViewsToAnimation(binding.passwordAuthorizationTextView)
-        tieViewsToAnimation(binding.passwordAuthorizationEditText)
-        tieViewsToAnimation(binding.authorizationButton)
-        tieRegistrationTextViewToAnimation(binding.registrationProposalTextView)
-        tieRegistrationTextViewToAnimation(binding.registrationLinkTextView)
+        tieViewsToAnimation(binding.firstNameRegistrationTextView)
+        tieViewsToAnimation(binding.firstNameRegistrationEditText)
+        tieViewsToAnimation(binding.lastNameRegistrationTextView)
+        tieViewsToAnimation(binding.lastNameRegistrationEditText)
+        tieViewsToAnimation(binding.loginRegistrationTextView)
+        tieViewsToAnimation(binding.loginRegistrationEditText)
+        tieViewsToAnimation(binding.passwordRegistrationTextView)
+        tieViewsToAnimation(binding.passwordRegistrationEditText)
+        tieViewsToAnimation(binding.emailRegistrationTextView)
+        tieViewsToAnimation(binding.emailRegistrationEditText)
+        tieViewsToAnimation(binding.registrationButton)
+        tieRegistrationTextViewToAnimation(binding.authorizationProposalTextView)
+        tieRegistrationTextViewToAnimation(binding.authorizationLinkTextView)
     }
 
     private fun tieViewsToAnimation(view: View) {
@@ -61,15 +66,14 @@ class AuthorizationFragment : Fragment() {
     }
 
     private fun setUnderlineToRegistrationLinkTextView() {
-        val charSequence = getString(R.string.registrationProposalLinkText)
+        val charSequence = getString(R.string.authorizationLinkText)
         var spannableString = SpannableString(charSequence)
         spannableString.setSpan(UnderlineSpan(), resources.getInteger(R.integer.zero), charSequence.length, resources.getInteger(R.integer.zero))
-        binding.registrationLinkTextView.text = spannableString
+        binding.authorizationLinkTextView.text = spannableString
     }
 
     override fun onDestroyView() {
         super.onDestroyView()
-        _bindind = null
+        _binding = null
     }
-
 }

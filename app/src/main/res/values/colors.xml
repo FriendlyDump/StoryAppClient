@@ -10,9 +10,8 @@
     <color name="statusBarColor">#FF0000</color>
     <color name="backgroundAppColor">#474242</color>
     <color name="appNameLogoColor">#FFFFFF</color>
-    <color name="appAuthorizationColor">#E32727</color>
-    <color name="editTextIconInFocus">#32EF11</color>
+    <color name="app_authorization_registration_color">#E32727</color>
+    <color name="green">#32EF11</color>
     <color name="red">#FF0000</color>
-    <color name="authorizationButtonColor">#4BF82E</color>
-    <color name="registrationLinkTextViewColor">#0000FF</color>
+    <color name="authorization_registration_button_background_color">#4BF82E</color>
 </resources>

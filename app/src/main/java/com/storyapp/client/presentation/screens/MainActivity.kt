@@ -14,7 +14,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         if (savedInstanceState == null) {
-            supportFragmentManager.beginTransaction().replace(R.id.fragmentContainer, AuthorizationFragment()).commitAllowingStateLoss()
+            supportFragmentManager.beginTransaction().replace(R.id.fragmentContainer, RegistrationFragment()).commitAllowingStateLoss()
         }
     }
 }

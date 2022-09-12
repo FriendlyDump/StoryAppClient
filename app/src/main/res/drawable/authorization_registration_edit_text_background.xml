@@ -4,16 +4,16 @@
     <item android:state_enabled="true" android:state_focused="true">
         <shape android:shape="rectangle">
             <solid android:color="@color/backgroundAppColor" />
-            <corners android:radius="@dimen/authorizationEditTextRadius" />
-            <stroke android:width="@dimen/authorizationEditTextStrokeWidth" android:color="@color/editTextIconInFocus" />
+            <corners android:radius="@dimen/authorizationRegistrationEditTextRadius" />
+            <stroke android:width="@dimen/authorizationRegistrationEditTextStrokeWidth" android:color="@color/green" />
         </shape>
     </item>
 
     <item android:state_enabled="true">
         <shape android:shape="rectangle">
             <solid android:color="@color/backgroundAppColor" />
-            <corners android:radius="@dimen/authorizationEditTextRadius" />
-            <stroke android:width="@dimen/authorizationEditTextStrokeWidth" android:color="@color/red" />
+            <corners android:radius="@dimen/authorizationRegistrationEditTextRadius" />
+            <stroke android:width="@dimen/authorizationRegistrationEditTextStrokeWidth" android:color="@color/red" />
         </shape>
     </item>
 
