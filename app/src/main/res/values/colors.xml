@@ -7,4 +7,10 @@
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="statusBarColor">#FF0000</color>
+    <color name="backgroundAppColor">#474242</color>
+    <color name="appNameLogoColor">#FFFFFF</color>
+    <color name="mainFragmentToolBarColor">#0CCF1F</color>
+    <color name="navigationViewBackgroundColor">#FFE600</color>
+    <color name="navigationViewContentBackground">#17CFDF</color>
 </resources>
