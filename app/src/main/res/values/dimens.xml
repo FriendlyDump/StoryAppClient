@@ -51,4 +51,13 @@
     <dimen name="profileFirstLastNameTextSize">30sp</dimen>
     <dimen name="navigationViewContentPaddingBottom">5dp</dimen>
     <dimen name="profileFistLastNameToolbarTextSize">25sp</dimen>
+    <dimen name="profileInformationLinearLayoutPaddingTop">15dp</dimen>
+    <dimen name="profileImageViewSize">120dp</dimen>
+    <dimen name="firstLastNameMarginTop">10dp</dimen>
+    <dimen name="firstLastNameTextSize">20sp</dimen>
+    <dimen name="spaceBetweenFirstLastNameWidth">10dp</dimen>
+    <dimen name="spaceBetweenFirstLastNameHeight">0dp</dimen>
+    <dimen name="profileDescriptionTextSize">15sp</dimen>
+    <dimen name="profileDescriptionMarginTop">15dp</dimen>
+    <dimen name="profileStoriesRecyclerViewMarginTop">10dp</dimen>
 </resources>
