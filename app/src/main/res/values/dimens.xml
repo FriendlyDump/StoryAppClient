@@ -43,4 +43,12 @@
     <integer name="durationAnimation">1000</integer>
     <integer name="durationProposalAnimation">1300</integer>
     <integer name="zero">0</integer>
+    <dimen name="appNameLogoSize">32sp</dimen>
+    <dimen name="profileImageViewMarginTop">20dp</dimen>
+    <dimen name="profileImageViewBorderWidth">5dp</dimen>
+    <dimen name="profileFirstNameMarginTop">10dp</dimen>
+    <dimen name="profileLastNameMarginTop">5dp</dimen>
+    <dimen name="profileFirstLastNameTextSize">30sp</dimen>
+    <dimen name="navigationViewContentPaddingBottom">5dp</dimen>
+    <dimen name="profileFistLastNameToolbarTextSize">25sp</dimen>
 </resources>

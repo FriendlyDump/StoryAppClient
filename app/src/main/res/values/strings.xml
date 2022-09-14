@@ -21,4 +21,7 @@
     <string name="authorizationProposalText">Already have an account?</string>
     <string name="registrationProposalLinkText">Register now</string>
     <string name="authorizationLinkText">Log in now</string>
+    <string name="navigation_drawer_open">Open</string>
+    <string name="navigation_drawer_close">Close</string>
+    <string name="filterStoriesIconMenuTitle">Filter stories</string>
 </resources>

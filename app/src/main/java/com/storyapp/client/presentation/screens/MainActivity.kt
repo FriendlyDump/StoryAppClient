@@ -1,8 +1,7 @@
-package com.storyapp.client.presentation.screens
+package com.storyapp.client
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import com.storyapp.client.R
 import com.storyapp.client.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {

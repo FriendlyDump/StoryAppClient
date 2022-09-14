@@ -14,4 +14,7 @@
     <color name="green">#32EF11</color>
     <color name="red">#FF0000</color>
     <color name="authorization_registration_button_background_color">#4BF82E</color>
+    <color name="mainFragmentToolBarColor">#0CCF1F</color>
+    <color name="navigationViewBackgroundColor">#FFE600</color>
+    <color name="navigationViewContentBackground">#17CFDF</color>
 </resources>
