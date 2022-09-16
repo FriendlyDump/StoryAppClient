@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/registrationFragment">
+
+    <fragment
+        android:id="@+id/registrationFragment"
+        android:name="com.storyapp.client.presentation.screens.RegistrationFragment"
+        android:label="fragment_registration"
+        tools:layout="@layout/fragment_registration" >
+        <action
+            android:id="@+id/action_registrationFragment_to_authorizationFragment"
+            app:destination="@id/authorizationFragment"
+            app:popUpTo="@id/registrationFragment"
+            app:popUpToInclusive="true"/>
+        <action
+            android:id="@+id/action_registrationFragment_to_mainFragment"
+            app:destination="@id/mainFragment"
+            app:popUpTo="@id/registrationFragment"
+            app:popUpToInclusive="true"/>
+    </fragment>
+    <fragment
+        android:id="@+id/authorizationFragment"
+        android:name="com.storyapp.client.presentation.screens.AuthorizationFragment"
+        android:label="fragment_authorization"
+        tools:layout="@layout/fragment_authorization" >
+        <action
+            android:id="@+id/action_authorizationFragment_to_registrationFragment"
+            app:destination="@id/registrationFragment"
+            app:popUpTo="@id/authorizationFragment"
+            app:popUpToInclusive="true"/>
+        <action
+            android:id="@+id/action_authorizationFragment_to_mainFragment"
+            app:destination="@id/mainFragment"
+            app:popUpTo="@id/authorizationFragment"
+            app:popUpToInclusive="true"/>
+    </fragment>
+    <fragment
+        android:id="@+id/mainFragment"
+        android:name="com.storyapp.client.presentation.screens.MainFragment"
+        android:label="fragment_main_screen"
+        tools:layout="@layout/fragment_main_screen" >
+        <action
+            android:id="@+id/action_mainFragment_to_profileFragment"
+            app:destination="@id/profileFragment" />
+        <action
+            android:id="@+id/action_mainFragment_to_authorizationFragment"
+            app:destination="@id/authorizationFragment"
+            app:popUpTo="@id/mainFragment"
+            app:popUpToInclusive="true"/>
+    </fragment>
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.storyapp.client.presentation.screens.ProfileFragment"
+        android:label="fragment_profile"
+        tools:layout="@layout/fragment_profile" >
+        <action
+            android:id="@+id/action_profileFragment_to_mainFragment"
+            app:destination="@id/mainFragment" />
+    </fragment>
+</navigation>

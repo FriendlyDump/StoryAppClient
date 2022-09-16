@@ -7,6 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
 import androidx.appcompat.widget.Toolbar
+import androidx.navigation.fragment.findNavController
 import com.storyapp.client.R
 import com.storyapp.client.databinding.FragmentProfileBinding
 
@@ -28,16 +29,14 @@ class ProfileFragment: Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        toolBarStuff(savedInstanceState)
+        toolBarStuff()
     }
 
-    private fun toolBarStuff(savedInstanceState: Bundle?) {
+    private fun toolBarStuff() {
         toolbar = binding.profileFragmentToolbar
         binding.profileToolbarTextView.text = "Hopeless Future"
         toolbar.setNavigationOnClickListener {
-            if (savedInstanceState == null) {
-                fragmentManager?.beginTransaction()?.replace(R.id.fragmentContainer, MainFragment())?.commit()
-            }
+            findNavController().navigateUp()
         }
         toolbar.setOnMenuItemClickListener { menuItem ->
             when (menuItem.itemId) {

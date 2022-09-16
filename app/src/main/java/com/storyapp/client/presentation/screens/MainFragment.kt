@@ -5,13 +5,16 @@ import android.view.*
 import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.appcompat.app.ActionBarDrawerToggle
+import androidx.core.view.GravityCompat
 import androidx.drawerlayout.widget.DrawerLayout
+import androidx.navigation.fragment.findNavController
 import com.google.android.material.navigation.NavigationView
 import com.storyapp.client.R
 import com.storyapp.client.databinding.FragmentMainScreenBinding
+import com.storyapp.client.presentation.screens.assistant.AssistantNavigation
 
 
-class MainFragment: Fragment() {
+class MainFragment: Fragment(), AssistantNavigation {
 
     private var _binding: FragmentMainScreenBinding? = null
     private val binding get() = _binding!!
@@ -35,7 +38,8 @@ class MainFragment: Fragment() {
         init()
         setNavigationDrawer()
         setMenuClickListenerToolbar()
-        setNavigationViewItemClickListener()
+        navigateToProfileScreen()
+        navigateToAuthorizationScreen()
     }
 
     private fun init() {
@@ -62,12 +66,23 @@ class MainFragment: Fragment() {
         toggle.syncState()
     }
 
-    private fun setNavigationViewItemClickListener() {
+    private fun navigateToProfileScreen() {
         binding.apply {
             profileImageView.setOnClickListener {
-                Toast.makeText(requireContext(), "Clicked on image", Toast.LENGTH_SHORT).show()
+                drawerLayout.closeDrawer(GravityCompat.START)
+                navigateToSomeDestination(R.id.action_mainFragment_to_profileFragment)
             }
         }
+    }
+
+    private fun navigateToAuthorizationScreen() {
+        binding.exitMainScreen.setOnClickListener {
+            navigateToSomeDestination(R.id.action_mainFragment_to_authorizationFragment)
+        }
+    }
+
+    override fun navigateToSomeDestination(destination: Int) {
+        findNavController().navigate(destination)
     }
 
 }

@@ -110,6 +110,18 @@
 
         </LinearLayout>
 
+        <TextView
+            app:drawableStartCompat="@drawable/ic_go_back_to_authorization_screen_icon"
+            android:id="@+id/exitMainScreen"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/exitMainScreenTitle"
+            android:textSize="@dimen/exitMainScreenTextViewSize"
+            android:textColor="@color/black"
+            android:drawablePadding="@dimen/exitMainScreenTextViewDrawablePadding"
+            android:layout_marginTop="@dimen/exitMainScreenTextViewMarginTop"
+            android:layout_marginStart="@dimen/exitMainScreenTextViewMarginStart"/>
+
     </com.google.android.material.navigation.NavigationView>
 
 </androidx.drawerlayout.widget.DrawerLayout>

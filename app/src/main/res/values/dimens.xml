@@ -60,4 +60,8 @@
     <dimen name="profileDescriptionTextSize">15sp</dimen>
     <dimen name="profileDescriptionMarginTop">15dp</dimen>
     <dimen name="profileStoriesRecyclerViewMarginTop">10dp</dimen>
+    <dimen name="exitMainScreenTextViewSize">25sp</dimen>
+    <dimen name="exitMainScreenTextViewDrawablePadding">5dp</dimen>
+    <dimen name="exitMainScreenTextViewMarginTop">200dp</dimen>
+    <dimen name="exitMainScreenTextViewMarginStart">15dp</dimen>
 </resources>

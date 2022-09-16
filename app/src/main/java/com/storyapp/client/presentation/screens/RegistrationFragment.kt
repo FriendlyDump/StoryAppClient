@@ -1,18 +1,21 @@
 package com.storyapp.client.presentation.screens
 
+import android.content.Context
 import android.os.Bundle
 import android.text.SpannableString
 import android.text.style.UnderlineSpan
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.view.animation.Animation
 import android.view.animation.AnimationUtils
+import androidx.fragment.app.Fragment
+import androidx.navigation.fragment.findNavController
 import com.storyapp.client.R
 import com.storyapp.client.databinding.FragmentRegistrationBinding
+import com.storyapp.client.presentation.screens.assistant.AssistantNavigation
 
-class RegistrationFragment : Fragment() {
+class RegistrationFragment : Fragment(), AssistantNavigation {
 
     private var _binding: FragmentRegistrationBinding? = null
     private val binding get() = _binding!!
@@ -33,31 +36,33 @@ class RegistrationFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         viewsAnimation()
         setUnderlineToRegistrationLinkTextView()
+        navigateToMainScreen()
+        navigateToAuthorizationScreen()
     }
 
     private fun viewsAnimation() {
         myAnimation = AnimationUtils.loadAnimation(requireContext(), R.anim.views_animation)
         proposalAnimation = AnimationUtils.loadAnimation(requireContext(), R.anim.proposal_textview_animation)
-        tieViewsToAnimation(binding.appNameLogo)
-        tieViewsToAnimation(binding.registrationTextView)
-        tieViewsToAnimation(binding.cardView)
-        tieViewsToAnimation(binding.cardViewLinearLayout)
-        tieViewsToAnimation(binding.firstNameRegistrationTextView)
-        tieViewsToAnimation(binding.firstNameRegistrationEditText)
-        tieViewsToAnimation(binding.lastNameRegistrationTextView)
-        tieViewsToAnimation(binding.lastNameRegistrationEditText)
-        tieViewsToAnimation(binding.loginRegistrationTextView)
-        tieViewsToAnimation(binding.loginRegistrationEditText)
-        tieViewsToAnimation(binding.passwordRegistrationTextView)
-        tieViewsToAnimation(binding.passwordRegistrationEditText)
-        tieViewsToAnimation(binding.emailRegistrationTextView)
-        tieViewsToAnimation(binding.emailRegistrationEditText)
-        tieViewsToAnimation(binding.registrationButton)
+        tieViewToAnimation(binding.appNameLogo)
+        tieViewToAnimation(binding.registrationTextView)
+        tieViewToAnimation(binding.cardView)
+        tieViewToAnimation(binding.cardViewLinearLayout)
+        tieViewToAnimation(binding.firstNameRegistrationTextView)
+        tieViewToAnimation(binding.firstNameRegistrationEditText)
+        tieViewToAnimation(binding.lastNameRegistrationTextView)
+        tieViewToAnimation(binding.lastNameRegistrationEditText)
+        tieViewToAnimation(binding.loginRegistrationTextView)
+        tieViewToAnimation(binding.loginRegistrationEditText)
+        tieViewToAnimation(binding.passwordRegistrationTextView)
+        tieViewToAnimation(binding.passwordRegistrationEditText)
+        tieViewToAnimation(binding.emailRegistrationTextView)
+        tieViewToAnimation(binding.emailRegistrationEditText)
+        tieViewToAnimation(binding.registrationButton)
         tieRegistrationTextViewToAnimation(binding.authorizationProposalTextView)
         tieRegistrationTextViewToAnimation(binding.authorizationLinkTextView)
     }
 
-    private fun tieViewsToAnimation(view: View) {
+    private fun tieViewToAnimation(view: View) {
         view.startAnimation(myAnimation)
     }
 
@@ -72,8 +77,25 @@ class RegistrationFragment : Fragment() {
         binding.authorizationLinkTextView.text = spannableString
     }
 
+    private fun navigateToMainScreen() {
+        binding.registrationButton.setOnClickListener {
+            navigateToSomeDestination(R.id.action_registrationFragment_to_mainFragment)
+        }
+    }
+
+    private fun navigateToAuthorizationScreen() {
+        binding.authorizationLinkTextView.setOnClickListener {
+            navigateToSomeDestination(R.id.action_registrationFragment_to_authorizationFragment)
+        }
+    }
+
     override fun onDestroyView() {
         super.onDestroyView()
         _binding = null
     }
+
+    override fun navigateToSomeDestination(destination: Int) {
+        findNavController().navigate(destination)
+    }
+
 }
